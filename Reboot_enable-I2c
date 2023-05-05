@@ -1,0 +1,8 @@
+sudo nano /usr/local/bin/run_on_boot.sh
+sudo ldto enable i2c-ao
+sudo ldto enable i2c-b
+sudo chmod +x /usr/local/bin/run_on_boot.sh
+sudo crontab -e
+
+#add this to the bottom of the file, and save
+@reboot /usr/local/bin/run_on_boot.sh
